@@ -5,7 +5,7 @@
 
 ## 作业要求原文
 
-Task: Predict the rating scores of the pairs `(u, i)` in the `Test.txt` file. （注：数据集在文件夹 `data-new/` 中，打分范围为 `[0,100]`）
+Task: Predict the rating scores of the pairs `(u, i)` in the `Test.txt` file. （注：数据集在文件夹 `data-new/` 中，打分范围为 `[0,100]` ）
 
 Dataset： 
 
@@ -28,8 +28,8 @@ Python 3.7.0 64-bit
 ## 功能描述
 
 - [x] 使用基础带偏置的 SVD 算法作为基础推荐算法
-- [x] 使用`ItemAttribute.txt`对推荐结果进行改进（使用最小二乘法，将物品属性作为输入，拟合训练集打分真实值和预测值之差，虽然优化的效果微乎其微）
-- [x] 训练集（`trainset.csv`）和测试集（`testset.csv`）的划分（随机数法，`Train.txt`中所有记录的 80% 作为训练集， 20% 作为测试集）
+- [x] 使用 `ItemAttribute.txt` 对推荐结果进行改进（使用最小二乘法，将物品属性作为输入，拟合训练集打分真实值和预测值之差，虽然优化的效果微乎其微）
+- [x] 训练集（ `trainset.csv` ）和测试集（ `testset.csv` ）的划分（随机数法， `Train.txt` 中所有记录的 80% 作为训练集， 20% 作为测试集）
 - [x] 对划分出的训练集进行 SVD 算法训练，并用物品属性拟合训练集打分真实值和最后一轮训练的预测值
 - [x] 对测试集进行测试，并报告测试集 RMSE （在打分范围`[0,100]`的情况下，测试集 RMSE 在 `26.40` 左右）
 - [x] 对 `Test.txt` 给定的记录进行预测，并输出结果文件 `result1.txt` （引入物品属性优化前）和 `result2.txt`（引入物品属性优化后）
@@ -48,11 +48,11 @@ Python 3.7.0 64-bit
 [opt1] [arg1] [opt2] [arg2] ......
 ```
 
-其中`opt`是选项，`arg`是这个选项对应的值。
+其中 `opt` 是选项， `arg` 是这个选项对应的值。
 
 命令行参数的选项和对应的值如下：
 
-`-g`：重新生成训练集文件（`trainset.csv`）和测试集文件（`testset.csv`），默认是如果当前路径下有这两个文件则不重新生成，没有参数值
+`-g`：重新生成训练集文件（ `trainset.csv` ）和测试集文件（ `testset.csv` ），默认是如果当前路径下有这两个文件则不重新生成，没有参数值
 
 `-t`：重新进行训练，默认是如果当前路径下有训练结果文件则不重新训练，没有参数值
 
